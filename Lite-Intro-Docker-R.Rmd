@@ -1,0 +1,184 @@
+---
+title: "Docker"
+author: "Phil Bowsher"
+date: "5/4/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Docker
+
+Lite intro
+
+## Words to know:
+
+http://blog.pavelsklenar.com/docker-confusing-installation-windows/
+
+kitematic
+https://docs.docker.com/kitematic/userguide/
+https://kitematic.com/
+
+Docker Toolbox
+https://docs.docker.com/toolbox/toolbox_install_windows/
+http://www.infoworld.com/article/2971225/application-virtualization/docker-toolbox-unites-compose-boot2docker-kitematic.html
+
+Docker
+https://www.youtube.com/watch?v=YFl2mCHdv24
+
+Boot2Docker
+http://boot2docker.io/
+
+VirtualBox
+
+## Make sure your box enables Virtualization
+
+On Win 7
+
+https://www.microsoft.com/en-us/download/details.aspx?id=592
+
+http://amiduos.com/support/knowledge-base/article/how-can-i-get-to-know-my-processor-supports-virtualization-technology
+
+## Setup your Bios if needed
+
+https://www.htpcbeginner.com/install-docker-on-windows-7-8-10/
+
+http://amiduos.com/support/knowledge-base/article/how-can-i-get-to-know-my-processor-supports-virtualization-technology
+
+https://forums.docker.com/t/running-docker-machine-on-a-ubuntu-vm-from-virtualbox/10779/9
+
+## Docker toolbox
+
+https://docs.docker.com/toolbox/toolbox_install_windows/
+
+https://docs.docker.com/toolbox/toolbox_install_windows/#what-you-get-and-how-it-works
+
+## Launch kitomatic
+
+https://www.tdnservices.com.au/how-to-install-r-on-window-using-docker/
+
+## Seach for rocker tidyverse
+
+https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image
+
+## Download and Create tidyverse
+
+https://www.andrewheiss.com/blog/2017/04/27/super-basic-practical-guide-to-docker-and-rstudio/
+
+## Go to your browser and launch RStudio
+
+https://www.tdnservices.com.au/how-to-install-r-on-window-using-docker/
+
+Most will be done there...
+
+## bash shell via RS or via docker with this command
+
+docker exec -it tidyverse bash
+
+http://developmentalmadness.com/2016/04/20/docker-open-a-bash-shell-in-a-docker-container-without-ssh/
+
+## Save container
+
+https://docs.docker.com/engine/reference/commandline/save/
+
+https://docs.docker.com/engine/reference/commandline/export/
+
+http://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-via-repository
+
+Export goes to your users folder.
+
+## Tips:
+
+https://github.com/rocker-org/rocker/issues/155
+
+https://github.com/rocker-org/rocker/issues/182
+
+http://stackoverflow.com/questions/22655867/what-is-the-difference-between-save-and-export-in-docker
+
+https://blog.pavelsklenar.com/5-useful-docker-tip-and-tricks-on-windows/
+
+https://docs.docker.com/engine/reference/commandline/cp/
+https://github.com/moby/moby/issues/5846
+
+https://docs.docker.com/machine/reference/scp/
+
+http://developmentalmadness.com/2016/03/05/docker-permanently-mount-a-virtualbox-shared-folder/
+
+http://stackoverflow.com/questions/30330442/how-to-ssh-into-docker-machine-virtualbox-instance
+
+http://stackoverflow.com/questions/29009552/how-copy-paste-text-on-boottodocker-console
+
+https://serverfault.com/questions/674974/how-to-mount-a-virtualbox-shared-folder/674978#674978
+
+## Some Commands:
+
+docker-machine ssh default
+
+docker-machine ls
+ 
+docker-machine env default
+ 
+docker-machine stop default
+  
+docker-machine start default
+
+https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research/#11
+
+docker ps	list all the running containers on the host
+docker ps -a	list all the containers on the host, including those that have stopped
+docker exec -it <container-id> bash	opens bash shell for a currently running container
+docker stop <container-id>	stop a running container
+docker kill <container-id>	force stop a running container
+docker rm <container-id>	removes (deletes) a container
+docker rmi <container-id>	removes (deletes) an image
+docker rm -f $(docker ps -a -q)	remove all current containers
+docker rmi -f $(docker images -q)	remove all images, even those not in use
+
+## Other
+
+https://rpubs.com/MarkeD/datalab
+
+https://rpubs.com/johndharrison/RSelenium-Docker
+
+https://docs.docker.com/machine/get-started/
+
+## Analysis:
+
+https://blog.ouseful.info/tag/kitematic/
+
+## Some exmaples to try:
+
+http://dplyr.tidyverse.org/
+
+http://www.htmlwidgets.org/showcase_dygraphs.html
+
+## Shiny:
+
+https://github.com/rocker-org/rocker/issues/200
+
+## Windows 10:
+
+https://support.rstudio.com/hc/en-us/community/posts/212529588-Bash-on-Ubuntu-on-Windows-10-and-Rstudio-Server-Community-edition
+
+## Automated Docker image build testing
+
+https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research/#16
+
+https://www.andrewheiss.com/blog/2017/04/27/super-basic-practical-guide-to-docker-and-rstudio/
+
+"You can host these custom Dockerfiles on GitHub and connect them to Docker Hub as automated builds. Every time you push to the GitHub repository, Docker Hub will automatically rebuild the image so when people run docker pull repository/name, they’ll get the latest version. Magic.""
+
+## Oldie but goodie
+
+http://dirk.eddelbuettel.com/papers/r_and_docker_sep2014.pdf
+
+"Ok, seriously, what is Docker?
+Docker is a very lightweight abstraction
+using recent Linux kernel features which
+lets us to run code in cheap (to launch)
+and easy (to build) units: containers.
+We can share containers across OSs.
+It changes how we build and test R (and
+R packages).""
