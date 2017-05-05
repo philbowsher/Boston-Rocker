@@ -13,6 +13,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Lite intro
 
+Some tunes:
+
+https://www.youtube.com/watch?v=t76e04kZXHY
+Boston Rocker! Bob Luman (Red Sox Tribute!) 
+
+
 ## Words to know:
 
 http://blog.pavelsklenar.com/docker-confusing-installation-windows/
@@ -80,6 +86,8 @@ docker exec -it tidyverse bash
 http://developmentalmadness.com/2016/04/20/docker-open-a-bash-shell-in-a-docker-container-without-ssh/
 
 ## Save container
+
+docker export tidyverse > latest.tar
 
 https://docs.docker.com/engine/reference/commandline/save/
 

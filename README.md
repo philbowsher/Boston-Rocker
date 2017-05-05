@@ -15,3 +15,8 @@ install.packages("tidyverse")
 ``` 
 
 Version of R & RStudio comes with rocker tidyverse : ) .
+
+Some tunes for the process:
+
+https://www.youtube.com/watch?v=t76e04kZXHY
+Boston Rocker! Bob Luman (Red Sox Tribute!) 
