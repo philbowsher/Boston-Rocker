@@ -122,6 +122,8 @@ https://serverfault.com/questions/674974/how-to-mount-a-virtualbox-shared-folder
 
 ## Some Commands:
 
+docker-machine ip default
+
 docker-machine ssh default
 
 docker-machine ls
